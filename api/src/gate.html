@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Checking your browser</title>
+<style>
+  :root { --bg: #ffffff; --fg: #1a1a1f; --muted: #50505a; color-scheme: light dark; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #121216; --fg: #ececf1; --muted: #b4b4c0; } }
+  html, body { margin: 0; background: var(--bg); color: var(--fg); }
+  body { font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 36rem; margin: 0 auto; padding: 15vh 1rem 2rem; }
+  .rb-logo { display: block; margin: 0 0 12px; color: var(--fg); }
+  h1 { font-size: 1.75rem; line-height: 1.2; margin: 0 0 .5rem; }
+  p { color: var(--muted); margin: 0 0 1.5rem; }
+  .roundabout { min-height: 65px; }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+</head>
+<body>
+<main>
+  <svg class="rb-logo" width="40" height="40" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M12.08 20.5A23 23 0 0 1 51.07 19.14" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linecap="round"/><path d="M53.87 24.89L56.71 15.34L45.43 22.94Z" fill="currentColor" stroke="currentColor" stroke-width="3.4" stroke-linejoin="round"/><path d="M51.92 43.5A23 23 0 0 1 12.93 44.86" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linecap="round"/><path d="M10.13 39.11L7.29 48.66L18.57 41.06Z" fill="currentColor" stroke="currentColor" stroke-width="3.4" stroke-linejoin="round"/><defs><mask id="rbm"><rect width="64" height="64" fill="#fff"/><rect x="25" y="26" width="4.4" height="10" rx="2.2" fill="#000"/><rect x="34.6" y="26" width="4.4" height="10" rx="2.2" fill="#000"/></mask></defs><g mask="url(#rbm)"><circle cx="32" cy="32" r="13.5" fill="currentColor"/></g></svg>
+  <h1>Checking your browser</h1>
+  <p>This site uses Roundabout to keep out automated traffic. This usually takes a second; you may be asked to tick a box. You'll be sent on automatically.</p>
+  <div class="roundabout" data-sitekey="{{SITEKEY}}" data-language="{{LANG}}" data-callback="__rbGateDone"></div>
+  <noscript><p>Please enable JavaScript to continue to this site.</p></noscript>
+</main>
+<script src="{{BASE}}/widget/gate.js"></script>
+<script src="{{BASE}}/widget/api.js" async defer></script>
+</body>
+</html>

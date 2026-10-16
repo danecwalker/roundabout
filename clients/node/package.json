@@ -1,0 +1,36 @@
+{
+  "name": "@roundabout/clearance",
+  "version": "0.1.0",
+  "description": "Verify Roundabout pre-clearance cookies and gate whole sites behind a Roundabout challenge.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./src/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "captcha",
+    "turnstile",
+    "bot-protection",
+    "clearance",
+    "middleware",
+    "express"
+  ]
+}

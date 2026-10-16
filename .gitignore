@@ -1,0 +1,6 @@
+node_modules/
+dist/
+target/
+.env
+.DS_Store
+demo/.demo-site.json
